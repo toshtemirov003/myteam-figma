@@ -1017,6 +1017,18 @@ img {
           justify-content: space-between;
 }
 
+.site-footer__for-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .site-footer__logo-img {
   margin-bottom: 25px;
   display: block;
@@ -1067,6 +1079,7 @@ img {
 .site-footer__address {
   padding: 0;
   margin: 0;
+  margin-left: 100px;
   font-family: "Livvic", sans-serif;
   font-weight: 600;
   font-size: 15px;
@@ -1108,8 +1121,7 @@ img {
 
 @media only screen and (max-width: 968px) {
   .site-footer__address-wrapper {
-    width: 100%;
-    max-width: 300px;
+    width: 300px;
   }
 }
 
@@ -1176,6 +1188,9 @@ img {
     margin: 0 auto;
     margin-bottom: 40px;
     text-align: center;
+  }
+  .site-footer__address {
+    margin-left: 0;
   }
   .site-footer__logos-wrapper {
     margin-top: 0;
