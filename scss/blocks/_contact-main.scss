@@ -1,0 +1,15 @@
+.contact-main{
+    padding-top: 10px;
+    padding-bottom: 120px;
+    background-color: $color-midnight-green;
+}
+.contact-main__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@media only screen and (max-width: 836px){
+    .contact-main__container{
+        flex-direction: column;
+    }
+}

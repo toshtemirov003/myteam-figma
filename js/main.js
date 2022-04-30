@@ -6,3 +6,12 @@ const elHeaderBtn = document.querySelector('.js-header-btn')
 elHeaderBtn.addEventListener('click', () => {
   elHeaderNav.classList.toggle('sitenav--open')
 })   
+//
+const elCard = document.querySelector('.director-card')
+const elCardBtn = document.querySelectorAll('.director-card__toggler')
+
+elCardBtn.forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.closest('.director-card').classList.toggle('director-card--back-visible')
+  })
+})

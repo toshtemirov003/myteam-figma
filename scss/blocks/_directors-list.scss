@@ -1,0 +1,103 @@
+.directors-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    margin-left: -30px;
+    margin-bottom: -76px;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .directors-list__item {
+    width: 350px;
+    margin-left: 30px;
+    margin-bottom: 76px;
+  }
+  
+  .director-card {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 56px;
+    background-color: #012F34;
+    perspective: 1000px;
+  }
+  
+  .director-card__front {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    backface-visibility: hidden;
+    transition: transform 0.3s ease;
+    background-color: dodgerblue;
+  }
+  
+  .director-card--back-visible
+  .director-card__front {
+    transform: rotateY(180deg);
+  }
+  
+  .director-card__img {
+    width: 96px;
+    height: 96px;
+    border: 2px solid #C4FFFE;
+    border-radius: 50%;
+  }
+  
+  .director-card__back {
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+    padding-bottom: 56px;
+    flex-direction: column;
+    place-items: center;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: transform 0.3s ease;
+    background-color: lightgreen;
+    overflow: auto;
+  }
+  
+  .director-card--back-visible
+  .director-card__back {
+    transform: rotateY(360deg);
+  }
+  
+  .director-card__toggler {
+    width: 56px;
+    height: 56px;
+    position: absolute;
+    z-index: 1;
+    bottom: -28px;
+    left: calc(50% - 28px);
+    background-color: #F67E7E;
+    background-image: url(../img/plus-btn.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+  
+  .director-card--back-visible
+  .director-card__toggler {
+    transform: rotate(45deg);
+    background-color: #79C8C7;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+    ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+    ::-webkit-scrollbar-thumb {
+    background: rgb(255, 231, 74); 
+      border-radius:10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    
+    background: rgb(0, 0, 0); 
+  } 
